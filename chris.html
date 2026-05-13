@@ -22,136 +22,24 @@ body {
   border-radius: 6px;
   overflow: hidden;
   box-shadow: 0 10px 32px rgba(0,0,0,0.5);
-  border: 1px solid #555;
+  border: 1px solid #aaa;
 }
 
 /* ═══ HEADER ═══ */
 .card-header {
-  position: relative;
-  height: 118px;
-  display: flex; align-items: center;
-  background:
-    linear-gradient(175deg,
-      #111111 0%,
-      #1e1e1e 30%,
-      #261010 60%,
-      #1a1a1a 80%,
-      #0d0d0d 100%
-    );
-  overflow: hidden;
-}
-
-.card-header::before {
-  content: '';
-  position: absolute; inset: 0;
-  background:
-    repeating-linear-gradient(
-      90deg,
-      transparent 0px,
-      rgba(255,255,255,0.022) 1px,
-      transparent 2px,
-      transparent 4px
-    );
-  pointer-events: none;
-}
-
-.card-header .sheen {
-  position: absolute;
-  top: -30%; left: -10%; right: -10%;
-  height: 60%;
-  background: radial-gradient(ellipse at 50% 0%,
-    rgba(255,255,255,0.07) 0%,
-    transparent 70%
-  );
-  pointer-events: none;
-}
-
-.card-header .red-glow {
-  position: absolute; inset: 0;
-  background: radial-gradient(ellipse 80% 60% at 50% 55%,
-    rgba(160,20,10,0.22) 0%,
-    transparent 70%
-  );
-  pointer-events: none;
-}
-
-.card-header .stripe {
-  position: absolute;
-  bottom: 0; left: 0; right: 0; height: 3px;
-  background: linear-gradient(90deg,
-    transparent 0%,
-    #7a0000 8%,
-    #c0392b 30%,
-    #e8401e 50%,
-    #c0392b 70%,
-    #7a0000 92%,
-    transparent 100%
-  );
-}
-
-/* THE PLATE — full-width, slim, embedded */
-/* Fades white/light at center to brushed gunmetal at edges */
-.logo-plate {
-  position: relative; z-index: 2;
-  margin: 0 8px;
-  width: calc(100% - 16px);
-  background:
-    repeating-linear-gradient(
-      90deg,
-      transparent 0px,
-      rgba(255,255,255,0.025) 1px,
-      transparent 2px,
-      transparent 4px
-    ),
-    radial-gradient(ellipse at 50% 50%,
-      #e8e8e8 0%,
-      #c8c8c8 25%,
-      #8a8a8a 55%,
-      #5c5c5c 80%,
-      #484848 100%
-    );
-  border-top: 1px solid #aaa;
-  border-bottom: 1px solid #2a2a2a;
-  border-left: 1px solid #888;
-  border-right: 1px solid #444;
-  border-radius: 3px;
-  padding: 8px 14px;
+  background: #ffffff;
   display: flex; align-items: center; justify-content: center;
-  box-shadow:
-    0 4px 14px rgba(0,0,0,0.75),
-    0 1px 0 rgba(255,255,255,0.18) inset,
-    0 -1px 0 rgba(0,0,0,0.4) inset;
+  padding: 16px 20px;
+  border-bottom: 3px solid #8a8a8a;
+  box-shadow: 0 1px 0 #c8c8c8 inset;
 }
 
-.logo-plate img {
+.card-header img {
   width: 100%;
   max-width: 260px;
   height: auto;
   display: block;
-  filter: drop-shadow(0 1px 3px rgba(0,0,0,0.35));
 }
-
-/* rivets — small, corners */
-.rivet {
-  position: absolute;
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%, #c0c0c0 0%, #707070 55%, #383838 100%);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.8), inset 0 1px 0 rgba(255,255,255,0.25);
-  z-index: 3;
-}
-.rivet::after {
-  content: '';
-  position: absolute; top: 50%; left: 50%;
-  transform: translate(-50%,-50%);
-  width: 2px; height: 2px;
-  border-radius: 50%;
-  background: rgba(0,0,0,0.5);
-}
-.rivet.tl { top: 4px; left: 5px; }
-.rivet.tr { top: 4px; right: 5px; }
-.rivet.bl { bottom: 4px; left: 5px; }
-.rivet.br { bottom: 4px; right: 5px; }
 
 /* ═══ PROFILE PHOTO ═══ */
 .profile-photo-wrap {
@@ -274,67 +162,18 @@ body {
 
 /* ═══ FOOTER ═══ */
 .card-footer {
-  position: relative;
-  height: 118px;
-  display: flex; align-items: center;
-  background:
-    linear-gradient(175deg,
-      #0d0d0d 0%,
-      #1a1a1a 20%,
-      #261010 55%,
-      #1e1e1e 80%,
-      #111111 100%
-    );
-  overflow: hidden;
-}
-.card-footer::before {
-  content: '';
-  position: absolute; inset: 0;
-  background:
-    repeating-linear-gradient(
-      90deg,
-      transparent 0px,
-      rgba(255,255,255,0.022) 1px,
-      transparent 2px,
-      transparent 4px
-    );
-  pointer-events: none;
-}
-.card-footer .sheen {
-  position: absolute;
-  bottom: -30%; left: -10%; right: -10%;
-  height: 60%;
-  background: radial-gradient(ellipse at 50% 100%,
-    rgba(255,255,255,0.06) 0%,
-    transparent 70%
-  );
-  pointer-events: none;
-}
-.card-footer .red-glow {
-  position: absolute; inset: 0;
-  background: radial-gradient(ellipse 80% 60% at 50% 45%,
-    rgba(160,20,10,0.22) 0%,
-    transparent 70%
-  );
-  pointer-events: none;
-}
-.card-footer .stripe {
-  position: absolute;
-  top: 0; left: 0; right: 0; height: 3px;
-  background: linear-gradient(90deg,
-    transparent 0%,
-    #7a0000 8%,
-    #c0392b 30%,
-    #e8401e 50%,
-    #c0392b 70%,
-    #7a0000 92%,
-    transparent 100%
-  );
+  background: #ffffff;
+  display: flex; align-items: center; justify-content: center;
+  padding: 14px 20px;
+  border-top: 3px solid #8a8a8a;
+  box-shadow: 0 -1px 0 #c8c8c8 inset;
 }
 
-/* Footer plate — same as header but Team PRP logo sized smaller */
-.card-footer .logo-plate img {
+.card-footer img {
+  width: 100%;
   max-width: 200px;
+  height: auto;
+  display: block;
 }
 </style>
 </head>
@@ -343,16 +182,7 @@ body {
 
 <!-- HEADER -->
 <div class="card-header">
-  <div class="sheen"></div>
-  <div class="red-glow"></div>
-  <div class="stripe"></div>
-  <div class="logo-plate" style="position:relative;z-index:2;">
-    <span class="rivet tl"></span>
-    <span class="rivet tr"></span>
-    <span class="rivet bl"></span>
-    <span class="rivet br"></span>
-    <img src="gearsix-logo.png" alt="Gear Six Auto Parts Logo">
-  </div>
+  <img src="gearsix-logo.png" alt="Gear Six Auto Parts Logo">
 </div>
 
 <!-- PROFILE PHOTO -->
@@ -419,16 +249,7 @@ body {
 
 <!-- FOOTER -->
 <div class="card-footer">
-  <div class="sheen"></div>
-  <div class="red-glow"></div>
-  <div class="stripe"></div>
-  <div class="logo-plate" style="position:relative;z-index:2;">
-    <span class="rivet tl"></span>
-    <span class="rivet tr"></span>
-    <span class="rivet bl"></span>
-    <span class="rivet br"></span>
-    <img src="teamprp.png" alt="Team PRP Premium Recycled Parts Affiliate">
-  </div>
+  <img src="teamprp.png" alt="Team PRP Premium Recycled Parts Affiliate">
 </div>
 
 </div>
